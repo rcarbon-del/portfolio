@@ -14,10 +14,8 @@ const About = () => {
         <h2 className={styles.sectionHeadText}>Radge Daryll A. Carbonel</h2>
       </motion.div>
       <motion.p variants={fadeIn("", "", 0.1, 1)} className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-        I am a full-stack web developer with a passion for learning and creating. 
-         am currently a 4th year student at the University of the Philippines Los 
-         Baños taking up a degree in Computer Science. I am also a member of the 
-         UPLB Computer Science Society and the UPLB Data Science Guild.
+        I am Radge Daryll Carbonel, currently 18 years old and born in Baguio City, Benguet. I am a first-year student at University of the Cordilleras who is currently taking the course of Bachelor of Science in Computer Science.
+        I also graduated from Baguio City National Science High School at rank 15 and Manuel L. Quezon Elementary School at rank 13.
       </motion.p>
     </>
   )
