@@ -1,6 +1,8 @@
 import React from "react";
 import { Tilt } from "react-tilt";
 import {motion} from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faFacebook, faInstagram, faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 import { styles } from "../styles";
 import { services } from "../constants";
@@ -55,6 +57,23 @@ const About = () => {
         <motion.p variants={fadeIn("", "", 0.1, 1)} className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
           I also graduated from Baguio City National Science High School at rank 15 and Manuel L. Quezon Elementary School at rank 13.
         </motion.p>
+        <motion.div variants={fadeIn("", "", 0.1, 1)} className='flex flex-row justify-start items-center mt-5'>
+            <a href='https://www.facebook.com/rcarbondel/' target='_blank' rel="norefferer">
+              <FontAwesomeIcon icon={faFacebook} className='text-[#915EFF] text-2xl mr-5' />
+            </a>
+            <a href='https://github.com/rcarbon-del' target='_blank' rel='noreferrer'>
+              <FontAwesomeIcon icon={faGithub} className='text-[#915EFF] text-2xl mr-5' />
+            </a>
+            <a href='https://www.instagram.com/rcarbon.ig/' target='_blank' rel='noreferrer'>
+              <FontAwesomeIcon icon={faInstagram} className='text-[#915EFF] text-2xl mr-5' />
+            </a>
+            <a href='https://twitter.com/rcarbontwt/' target='_blank' rel='noreferrer'>
+              <FontAwesomeIcon icon={faTwitter} className='text-[#915EFF] text-2xl mr-5' />
+            </a>
+            <a href='https://www.linkedin.com/in/rcarbon/' target='_blank' rel='noreferrer'>
+              <FontAwesomeIcon icon={faLinkedin} className='text-[#915EFF] text-2xl mr-5' />
+            </a>
+          </motion.div>
       </div>
 
       <div className="w-1/4">
