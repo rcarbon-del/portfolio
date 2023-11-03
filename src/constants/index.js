@@ -42,20 +42,29 @@ import {
   
   const services = [
     {
-      title: "Web Developer",
+      title: "Communication",
       icon: web,
+      percentage: "65%",
     },
     {
-      title: "React Native Developer",
+      title: "Programming",
       icon: mobile,
+      percentage: "20%",
     },
     {
-      title: "Backend Developer",
+      title: "Critical Thinking",
       icon: backend,
+      percentage: "70%",
     },
     {
-      title: "Content Creator",
+      title: "Adaptability",
       icon: creator,
+      percentage: "90%",
+    },
+    {
+      title: "Teamwork",
+      icon: creator,
+      percentage: "90%",
     },
   ];
   

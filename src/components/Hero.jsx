@@ -3,6 +3,8 @@ import {motion} from "framer-motion";
 import ReactTyped from "react-typed";
 import {styles} from "../styles";
 import {ComputersCanvas} from "./canvas";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faFacebook, faInstagram, faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const Hero = () => {
   return (
@@ -23,11 +25,31 @@ const Hero = () => {
             I am a &nbsp;
             <ReactTyped strings={["Student", "Gamer", "Rookie Developer"]} typeSpeed={100} loop backSpeed={50} />
           </p>
+          
         </div>
       </div>
 
       <ComputersCanvas />
 
+    <div className={`absolute left-[9rem] top-[16rem] w-full flex `}>
+      <div className='flex flex-row justify-start items-center mt-5'>
+            <a href='https://www.facebook.com/rcarbondel/' target='_blank' rel="norefferer">
+              <FontAwesomeIcon icon={faFacebook} className='text-[#915EFF] text-2xl mr-5' />
+            </a>
+            <a href='https://github.com/rcarbon-del' target='_blank' rel='noreferrer'>
+              <FontAwesomeIcon icon={faGithub} className='text-[#915EFF] text-2xl mr-5' />
+            </a>
+            <a href='https://www.instagram.com/rcarbon.ig/' target='_blank' rel='noreferrer'>
+              <FontAwesomeIcon icon={faInstagram} className='text-[#915EFF] text-2xl mr-5' />
+            </a>
+            <a href='https://twitter.com/rcarbontwt/' target='_blank' rel='noreferrer'>
+              <FontAwesomeIcon icon={faTwitter} className='text-[#915EFF] text-2xl mr-5' />
+            </a>
+            <a href='https://www.linkedin.com/in/rcarbon/' target='_blank' rel='noreferrer'>
+              <FontAwesomeIcon icon={faLinkedin} className='text-[#915EFF] text-2xl mr-5' />
+            </a>
+          </div>
+          </div>
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <a href='#about'>
           <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
