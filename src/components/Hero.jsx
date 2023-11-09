@@ -31,7 +31,7 @@ const Hero = () => {
 
       <ComputersCanvas />
 
-    <div className={`absolute left-[9rem] top-[16rem] w-full flex `}>
+    <div className={`absolute top-[14rem] w-full flex justify-center items-center `}>
       <div className='flex flex-row justify-start items-center mt-5'>
             <a href='https://www.facebook.com/rcarbondel/' target='_blank' rel="norefferer">
               <FontAwesomeIcon icon={faFacebook} className='text-[#915EFF] text-2xl mr-5' />
