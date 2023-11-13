@@ -8,7 +8,8 @@ import { styles } from "../styles";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
-import { properpic } from "../assets";
+import { properpic, aboutme } from "../assets";
+import { faEarth, faMailBulk, faMap, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 const ServiceCard = ({ index, title, icon, percentage }) => (
   <Tilt className='xs:w-[250px] w-full'>
@@ -47,7 +48,7 @@ const About = () => {
     <div className='flex flex-row justify-start items-center mt-5'>
       <div className="w-5/6">
         <motion.div variants={textVariant()}>
-          <p className={styles.sectionSubText}>About Me</p>
+          <img src={aboutme} className="w-20 h-20 animate-spin-slow" alt="" />
           <h2 className={styles.sectionHeadText}>Radge Daryll A. Carbonel</h2>
         </motion.div>
         
@@ -73,6 +74,17 @@ const About = () => {
             <a href='https://www.linkedin.com/in/rcarbon/' target='_blank' rel='noreferrer'>
               <FontAwesomeIcon icon={faLinkedin} className='text-[#915EFF] text-2xl mr-5' />
             </a>
+            <p className="text-secondary text-[17px] leading-[30px] mr-5" >|</p>
+            <p><FontAwesomeIcon icon={faMap} className='text-[#915EFF] text-xl mr-2' /></p>
+            <p className="text-secondary text-[17px] leading-[30px]" >85 Santa Escolastica, Baguio City, Benguet 2600</p>
+          </motion.div>
+          <motion.div variants={fadeIn("", "", 0.1, 1)} className="flex justify-start items-center mt-5">
+          <p><FontAwesomeIcon icon={faPhone} className='text-[#915EFF] text-xl mr-2' /></p>
+          <p className="text-secondary text-[17px] leading-[30px] mr-5" >09760304353</p>
+          <p><FontAwesomeIcon icon={faMailBulk} className='text-[#915EFF] text-xl mr-2' /></p>
+          <p className="text-secondary text-[17px] leading-[30px] mr-5" >rac4843@students.uc-bcf.edu.ph</p>
+          <a href='https://uc-bcf.edu.ph'target='_blank' className="flex"><FontAwesomeIcon icon={faEarth} className='text-[#915EFF] text-xl mr-2' />
+          <p className="text-secondary text-[17px] leading-[30px] mr-5" >www.uc-bcf.edu.ph</p></a>
           </motion.div>
       </div>
 

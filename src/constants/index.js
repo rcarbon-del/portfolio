@@ -66,6 +66,21 @@ import {
       icon: creator,
       percentage: "90%",
     },
+    {
+      title: "Problem Solving",
+      icon: web,
+      percentage: "65%",
+    },
+    {
+      title: "Public Speaking",
+      icon: mobile,
+      percentage: "20%",
+    },
+    {
+      title: "Responsiveness",
+      icon: creator,
+      percentage: "90%",
+    },
   ];
   
   const technologies = [

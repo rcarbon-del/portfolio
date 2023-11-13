@@ -3,6 +3,7 @@ import {motion} from "framer-motion";
 import ReactTyped from "react-typed";
 import {styles} from "../styles";
 import {ComputersCanvas} from "./canvas";
+import { silhouette } from "../assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faFacebook, faInstagram, faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
@@ -25,7 +26,7 @@ const Hero = () => {
             I am a &nbsp;
             <ReactTyped strings={["Student", "Gamer", "Rookie Developer"]} typeSpeed={100} loop backSpeed={50} />
           </p>
-          
+          <img src={silhouette} className='w-[125px] h-[125px] mt-2' alt='' />
         </div>
       </div>
 
