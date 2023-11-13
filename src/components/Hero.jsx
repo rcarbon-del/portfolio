@@ -26,7 +26,7 @@ const Hero = () => {
             I am a &nbsp;
             <ReactTyped strings={["Student", "Gamer", "Rookie Developer"]} typeSpeed={100} loop backSpeed={50} />
           </p>
-          <img src={silhouette} className='w-[125px] h-[125px] mt-2' alt='' />
+          <img src={silhouette} className='w-[125px] h-[125px] mt-2 animate-pulse' alt='' />
         </div>
       </div>
 
@@ -35,19 +35,19 @@ const Hero = () => {
     <div className={`absolute top-[14rem] w-full flex justify-center items-center `}>
       <div className='flex flex-row justify-start items-center mt-5'>
             <a href='https://www.facebook.com/rcarbondel/' target='_blank' rel="norefferer">
-              <FontAwesomeIcon icon={faFacebook} className='text-[#915EFF] text-2xl mr-5' />
+              <FontAwesomeIcon icon={faFacebook} className='text-[#915EFF] text-2xl mr-5 hover:animate-bounce' />
             </a>
             <a href='https://github.com/rcarbon-del' target='_blank' rel='noreferrer'>
-              <FontAwesomeIcon icon={faGithub} className='text-[#915EFF] text-2xl mr-5' />
+              <FontAwesomeIcon icon={faGithub} className='text-[#915EFF] text-2xl mr-5 hover:animate-bounce' />
             </a>
             <a href='https://www.instagram.com/rcarbon.ig/' target='_blank' rel='noreferrer'>
-              <FontAwesomeIcon icon={faInstagram} className='text-[#915EFF] text-2xl mr-5' />
+              <FontAwesomeIcon icon={faInstagram} className='text-[#915EFF] text-2xl mr-5 hover:animate-bounce' />
             </a>
             <a href='https://twitter.com/rcarbontwt/' target='_blank' rel='noreferrer'>
-              <FontAwesomeIcon icon={faTwitter} className='text-[#915EFF] text-2xl mr-5' />
+              <FontAwesomeIcon icon={faTwitter} className='text-[#915EFF] text-2xl mr-5 hover:animate-bounce' />
             </a>
             <a href='https://www.linkedin.com/in/rcarbon/' target='_blank' rel='noreferrer'>
-              <FontAwesomeIcon icon={faLinkedin} className='text-[#915EFF] text-2xl mr-5' />
+              <FontAwesomeIcon icon={faLinkedin} className='text-[#915EFF] text-2xl mr-5 hover:animate-bounce' />
             </a>
           </div>
           </div>

@@ -60,19 +60,19 @@ const About = () => {
         </motion.p>
         <motion.div variants={fadeIn("", "", 0.1, 1)} className='flex flex-row justify-start items-center mt-5'>
             <a href='https://www.facebook.com/rcarbondel/' target='_blank' rel="norefferer">
-              <FontAwesomeIcon icon={faFacebook} className='text-[#915EFF] text-2xl mr-5' />
+              <FontAwesomeIcon icon={faFacebook} className='text-[#915EFF] text-2xl mr-5 hover:animate-bounce' />
             </a>
             <a href='https://github.com/rcarbon-del' target='_blank' rel='noreferrer'>
-              <FontAwesomeIcon icon={faGithub} className='text-[#915EFF] text-2xl mr-5' />
+              <FontAwesomeIcon icon={faGithub} className='text-[#915EFF] text-2xl mr-5 hover:animate-bounce' />
             </a>
             <a href='https://www.instagram.com/rcarbon.ig/' target='_blank' rel='noreferrer'>
-              <FontAwesomeIcon icon={faInstagram} className='text-[#915EFF] text-2xl mr-5' />
+              <FontAwesomeIcon icon={faInstagram} className='text-[#915EFF] text-2xl mr-5 hover:animate-bounce' />
             </a>
             <a href='https://twitter.com/rcarbontwt/' target='_blank' rel='noreferrer'>
-              <FontAwesomeIcon icon={faTwitter} className='text-[#915EFF] text-2xl mr-5' />
+              <FontAwesomeIcon icon={faTwitter} className='text-[#915EFF] text-2xl mr-5 hover:animate-bounce' />
             </a>
             <a href='https://www.linkedin.com/in/rcarbon/' target='_blank' rel='noreferrer'>
-              <FontAwesomeIcon icon={faLinkedin} className='text-[#915EFF] text-2xl mr-5' />
+              <FontAwesomeIcon icon={faLinkedin} className='text-[#915EFF] text-2xl mr-5 hover:animate-bounce' />
             </a>
             <p className="text-secondary text-[17px] leading-[30px] mr-5" >|</p>
             <p><FontAwesomeIcon icon={faMap} className='text-[#915EFF] text-xl mr-2' /></p>
