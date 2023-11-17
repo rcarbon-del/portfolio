@@ -23,6 +23,12 @@ import {
     jobit,
     tripguide,
     threejs,
+    elem,
+    jhs,
+    shs,
+    mom,
+    dad,
+    withsir,
   } from "../assets";
   
   export const navLinks = [
@@ -31,7 +37,7 @@ import {
       title: "About",
     },
     {
-      id: "work",
+      id: "portfolio",
       title: "Portfolio",
     },
     {
@@ -222,67 +228,40 @@ import {
   
   const projects = [
     {
-      name: "Car Rent",
+      name: "My Elementary School Experience",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "mongodb",
-          color: "green-text-gradient",
-        },
-        {
-          name: "tailwind",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: carrent,
-      source_code_link: "https://github.com/",
+        "I graduated elementary school at Manuel L. Quezon Elementary School in 2017 with high marks.",
+      image: elem,
     },
     {
-      name: "Job IT",
+      name: "My Junior High School Experience",
       description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "restapi",
-          color: "green-text-gradient",
-        },
-        {
-          name: "scss",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: jobit,
-      source_code_link: "https://github.com/",
+        "I graduated junior high school at Baguio City National Science High School in 2021 with high marks.",
+      image: jhs,
     },
     {
-      name: "Trip Guide",
+      name: "My Senior High School Experience",
       description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-      tags: [
-        {
-          name: "nextjs",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "supabase",
-          color: "green-text-gradient",
-        },
-        {
-          name: "css",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
+        "I graduated senior high school at Baguio City National Science High School in 2023 with high marks.",
+      image: shs,
+    },
+    {
+      name: "Hug with my mother, Elvie",
+      description:
+        "Thank you for always supporting me and helping me in every way possible Mom.",
+      image: mom,
+    },
+    {
+      name: "Handshake with my father, Edgar",
+      description:
+        " Thank you for everything you have done and will do in the future, Dad!",
+      image: dad,
+    },
+    {
+      name: "With Sir Jeremiah Pasion",
+      description:
+        "A picture with one of the newer professors here in UC CITCS.",
+      image: withsir,
     },
   ];
   

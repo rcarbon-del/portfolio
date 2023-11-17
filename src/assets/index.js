@@ -22,6 +22,12 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import dad from "./dad.jpg";
+import mom from "./mom.jpg";
+import jhs from "./jhs.jpg";
+import shs from "./shs.jpg";
+import elem from "./elem.jpg";
+import withsir from "./withsir.jpeg";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -64,4 +70,10 @@ export {
   tripguide,
   aboutme,
   silhouette,
+  dad,
+  mom,
+  jhs,
+  shs,
+  elem,
+  withsir,
 };
