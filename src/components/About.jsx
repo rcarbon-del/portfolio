@@ -12,10 +12,10 @@ import { properpic, aboutme } from "../assets";
 import { faEarth, faMailBulk, faMap, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 const ServiceCard = ({ index, title, icon, percentage }) => (
-  <Tilt className='xs:w-[250px] w-full'>
+  <Tilt className='xs:w-[250px] w-full transition-all'>
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card transition-all'
+      className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
     >
       <div
         options={{
@@ -89,8 +89,8 @@ const About = () => {
       </div>
 
       <div className="w-1/4">
-        <Tilt >
-          <motion.img src={properpic} variants={textVariant} className=' w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card transition-all' />
+        <Tilt className="transition-all">
+          <motion.img src={properpic} variants={textVariant} className=' w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card' />
         </Tilt>
       </div>
       </div>
