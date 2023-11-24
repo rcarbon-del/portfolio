@@ -18,18 +18,23 @@ const Receiver = () => {
     return initialValue || false;
   });
 
+  const [emails, setEmails] = useState([]);
+
   useEffect(() => {
     localStorage.setItem('isLoggedIn', JSON.stringify(isLoggedIn));
   }, [isLoggedIn]);
 
   const login = useGoogleLogin({
+    scope: 'https://mail.google.com/',
     onSuccess: (response) => {
       console.log(response);
       localStorage.setItem('access_token', response.access_token);
-      const access_token = localStorage.getItem('access_token');
-      getInbox(access_token)
-        .then(data => console.log(response.data))
-        .catch(error => console.error(error));
+      useEffect(() => {
+        const access_token = localStorage.getItem('access_token');
+        getInbox(access_token)
+          .then(data => setEmails(data))
+          .catch(error => console.error(error));
+      }, []);
       setIsLoggedIn(true);
     },
     onFailure: (error) => console.log(error),
@@ -66,7 +71,35 @@ const Receiver = () => {
             </button>
           )}
           </div>
+          
         </motion.div>
+        <div
+        className={`mt-10 overflow-hidden`}
+      >
+            {isLoggedIn ? (
+              <motion.div
+              variants={slideIn("left", "", 0.2, 1)}
+              className='bg-black-100 p-8 rounded-2xl'
+            >
+              <div>
+                {emails.map((email, index) => {
+                  const subject = email.payload.headers.find(header => header.name === 'Subject').value;
+                  const from = email.payload.headers.find(header => header.name === 'From').value;
+          
+                  return (
+                    <div key={index}>
+                      <h2>{subject}</h2>
+                      <p>{from}</p>
+                    </div>
+                  );
+                })}
+              </div>
+              </motion.div>
+            ) : (
+              <div>
+              </div>
+            )}
+        </div>
       </div>
     </>
   );
