@@ -1,5 +1,5 @@
 const getInbox = async (access_token) => {
-    const response = await fetch('https://gmail.googleapis.com/gmail/v1/users/me/messages?maxResults=10', {
+    const response = await fetch('https://gmail.googleapis.com/gmail/v1/users/me/messages/messages.list?maxResults=10', {
     method: "GET",
     headers: {
       Authorization: `Bearer ${access_token}`,
