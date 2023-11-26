@@ -138,7 +138,9 @@ const Receiver = () => {
               <h2 className={styles.sectionHeadText}>Email</h2>
               {messages3.map((message, index) => (
                 <div key={index}>
-                <p className="mt-5 text-secondary text-[25px] leading-[30px]">{message.content}</p>
+                <p className="mt-5 text-secondary text-[25px] leading-[30px]">From: {message.from}</p>
+                <p className="mt-5 text-secondary text-[25px] leading-[30px]">Subject: {message.subject}</p>
+                <p className="mt-5 text-secondary text-[25px] leading-[30px]">Message: {message.content}</p>
               </div>))}
           </motion.div>
           <motion.div
