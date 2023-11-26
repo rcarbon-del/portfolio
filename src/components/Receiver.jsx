@@ -8,7 +8,7 @@ import { slideIn } from "../utils/motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 
-import { getInbox, fetchEmails } from "../hooks";
+import { getInbox, fetchEmails, fetchEmails2, fetchEmails3 } from "../hooks";
 import { faArrowsRotate } from "@fortawesome/free-solid-svg-icons";
 
 
@@ -21,14 +21,25 @@ const Receiver = () => {
   });
 
   const [messages, setMessages] = useState([]);
+  const [messages2, setMessages2] = useState([]);
+  const [messages3, setMessages3] = useState([]);
 
   useEffect(() => {
     if (isLoggedIn) {
       const access_token = localStorage.getItem('access_token');
       const labelId = 'CATEGORY_PROMOTIONS';
+      const labelId2 = 'CATEGORY_UPDATES';
+      const labelId3 = 'CATEGORY_FORUMS';
       fetchEmails(access_token, labelId)
         .then(data => setMessages(data))
         .catch(error => console.error(error));
+      fetchEmails2(access_token, labelId2)
+        .then(data => setMessages2(data))
+        .catch(error => console.error(error));
+      fetchEmails3(access_token, labelId3)
+        .then(data => setMessages3(data))
+        .catch(error => console.error(error));
+
     }
   }, [isLoggedIn]);
 
@@ -40,13 +51,8 @@ const Receiver = () => {
     include_granted_scopes: true,
     scope: 'https://mail.google.com/',
     onSuccess: (response) => {
-      console.log(response);
       localStorage.setItem('access_token', response.access_token);
       const access_token = localStorage.getItem('access_token');
-      const labelId = 'CATEGORY_PROMOTIONS';
-      getInbox(access_token, labelId)
-        .then(data => console.log(data))
-        .catch(error => console.error(error));
       setIsLoggedIn(true);
     },
     onFailure: (error) => console.log(error),
@@ -61,8 +67,16 @@ const Receiver = () => {
   const refreshEmails = () => {
     const access_token = localStorage.getItem('access_token');
     const labelId = 'CATEGORY_PROMOTIONS';
+    const labelId2 = 'CATEGORY_UPDATES';
+    const labelId3 = 'CATEGORY_FORUMS';
     fetchEmails(access_token, labelId)
       .then(data => setMessages(data))
+      .catch(error => console.error(error));
+    fetchEmails2(access_token, labelId2)
+      .then(data => setMessages2(data))
+      .catch(error => console.error(error));
+    fetchEmails3(access_token, labelId3)
+      .then(data => setMessages3(data))
       .catch(error => console.error(error));
   };
 
@@ -111,27 +125,27 @@ const Receiver = () => {
             variants={slideIn("left", "", 0.2, 1)}
             className='w-1/3 bg-black-100 p-8 rounded-2xl'
             >
+              <h2 className={styles.sectionHeadText}>Chat</h2>
+              {messages2.map((message, index) => (
+                <div key={index}>
+                <p className="mt-5 text-secondary text-[25px] leading-[30px]">{message.content}</p>
+              </div>))}
+          </motion.div>
+          <motion.div
+            variants={slideIn("left", "", 0.2, 1)}
+            className='w-1/3 bg-black-100 p-8 rounded-2xl'
+            >
+              <h2 className={styles.sectionHeadText}>Email</h2>
+              {messages3.map((message, index) => (
+                <div key={index}>
+                <p className="mt-5 text-secondary text-[25px] leading-[30px]">{message.content}</p>
+              </div>))}
+          </motion.div>
+          <motion.div
+            variants={slideIn("left", "", 0.2, 1)}
+            className='w-1/3 bg-black-100 p-8 rounded-2xl'
+            >
               <h2 className={styles.sectionHeadText}>SMS/Text</h2>
-              {messages.map((message, index) => (
-                <div key={index}>
-                <p className="mt-5 text-secondary text-[25px] leading-[30px]">{message.content}</p>
-              </div>))}
-          </motion.div>
-          <motion.div
-            variants={slideIn("left", "", 0.2, 1)}
-            className='w-1/3 bg-black-100 p-8 rounded-2xl'
-            >
-              <h2 className={styles.sectionHeadText}>Messenger</h2>
-              {messages.map((message, index) => (
-                <div key={index}>
-                <p className="mt-5 text-secondary text-[25px] leading-[30px]">{message.content}</p>
-              </div>))}
-          </motion.div>
-          <motion.div
-            variants={slideIn("left", "", 0.2, 1)}
-            className='w-1/3 bg-black-100 p-8 rounded-2xl'
-            >
-              <h2 className={styles.sectionHeadText}>Emails</h2>
               {messages.map((message, index) => (
                 <div key={index}>
                 <p className="mt-5 text-secondary text-[25px] leading-[30px]">{message.content}</p>
