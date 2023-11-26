@@ -29,7 +29,7 @@ const Receiver = () => {
       const access_token = localStorage.getItem('access_token');
       const labelId = 'CATEGORY_PROMOTIONS';
       const labelId2 = 'CATEGORY_UPDATES';
-      const labelId3 = 'CATEGORY_PRIMARY';
+      const labelId3 = 'CATEGORY_FORUMS';
       fetchEmails(access_token, labelId)
         .then(data => setMessages(data))
         .catch(error => console.error(error));
@@ -68,7 +68,7 @@ const Receiver = () => {
     const access_token = localStorage.getItem('access_token');
     const labelId = 'CATEGORY_PROMOTIONS';
     const labelId2 = 'CATEGORY_UPDATES';
-    const labelId3 = 'CATEGORY_PRIMARY';
+    const labelId3 = 'CATEGORY_FORUMS';
     fetchEmails(access_token, labelId)
       .then(data => setMessages(data))
       .catch(error => console.error(error));
@@ -106,7 +106,7 @@ const Receiver = () => {
               <button onClick={() => {googleLogout(); localStorage.removeItem('accessToken'); setIsLoggedIn(false); setMessages([]); setMessages2([]); setMessages3([]);}} className="w-5/6 text-xl rounded-2xl text-tertiary outline-none bg-white font-bold shadow-md shadow-primary py-5 mx-auto">
                 Logout
               </button>
-              <button onClick={refreshEmails} className="w-1/6 text-xl rounded-2xl text-tertiary outline-none bg-white font-bold shadow-md shadow-primary py-5">
+              <button onClick={refreshEmails} className="w-1/6 text-xl rounded-2xl text-tertiary outline-none bg-white font-bold shadow-md shadow-primary py-5 after:animate-bounce">
               <FontAwesomeIcon icon={faArrowsRotate} className='mx-auto' />
               </button>
             </div>
@@ -123,34 +123,32 @@ const Receiver = () => {
       >
           <motion.div
             variants={slideIn("left", "", 0.2, 1)}
-            className='w-1/3 bg-black-100 p-8 rounded-2xl min-h-[50px]'
+            className='w-1/3 bg-black-100 p-8 rounded-2xl min-h-[450px]'
             >
               <h2 className={styles.sectionHeadText}>Chat</h2>
               {messages2.map((message, index) => (
                 <div key={index}>
-                <p className="mt-5 text-secondary text-[25px] leading-[30px]">{message.content}</p>
+                <p className="mt-7 text-secondary text-[25px] leading-[30px]">{message.content}</p>
               </div>))}
           </motion.div>
           <motion.div
             variants={slideIn("left", "", 0.2, 1)}
-            className='w-1/3 bg-black-100 p-8 rounded-2xl'
+            className='w-1/3 bg-black-100 p-8 rounded-2xl min-h-[450px]'
             >
               <h2 className={styles.sectionHeadText}>Email</h2>
               {messages3.map((message, index) => (
                 <div key={index}>
-                <p className="mt-5 text-secondary text-[25px] leading-[30px]">From: {message.from}</p>
-                <p className="mt-5 text-secondary text-[25px] leading-[30px]">Subject: {message.subject}</p>
-                <p className="mt-5 text-secondary text-[25px] leading-[30px]">Message: {message.content}</p>
+                <p className="mt-7 text-secondary text-[25px] leading-[30px]">From: {message.from}<br/>Subject: {message.subject}<br/>Message: {message.content}</p>
               </div>))}
           </motion.div>
           <motion.div
             variants={slideIn("left", "", 0.2, 1)}
-            className='w-1/3 bg-black-100 p-8 rounded-2xl'
+            className='w-1/3 bg-black-100 p-8 rounded-2xl min-h-[450px]'
             >
               <h2 className={styles.sectionHeadText}>Text</h2>
               {messages.map((message, index) => (
                 <div key={index}>
-                <p className="mt-5 text-secondary text-[25px] leading-[30px]">{message.content}</p>
+                <p className="mt-7 text-secondary text-[25px] leading-[30px]">{message.content}</p>
               </div>))}
           </motion.div>
         </div>
