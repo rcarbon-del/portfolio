@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useGoogleLogin, googleLogout} from '@react-oauth/google';
 
@@ -8,7 +8,7 @@ import { slideIn } from "../utils/motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 
-import { getInbox, fetchEmails, fetchEmails2, fetchEmails3 } from "../hooks";
+import { fetchEmails, fetchEmails2, fetchEmails3 } from "../hooks";
 import { faArrowsRotate } from "@fortawesome/free-solid-svg-icons";
 
 
