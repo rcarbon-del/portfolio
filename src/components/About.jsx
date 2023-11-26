@@ -82,7 +82,7 @@ const About = () => {
           <p><FontAwesomeIcon icon={faPhone} className='text-[#915EFF] text-xl mr-2' /></p>
           <p className="text-secondary text-[17px] leading-[30px] mr-5" >09760304353</p>
           <p><FontAwesomeIcon icon={faMailBulk} className='text-[#915EFF] text-xl mr-2' /></p>
-          <p className="text-secondary text-[17px] leading-[30px] mr-5" >rac4843@students.uc-bcf.edu.ph</p>
+          <p className="text-secondary text-[17px] leading-[30px] mr-5" >contact@rcarbon.me</p>
           <a href='https://uc-bcf.edu.ph'target='_blank' className="flex"><FontAwesomeIcon icon={faEarth} className='text-[#915EFF] text-xl mr-2' />
           <p className="text-secondary text-[17px] leading-[30px] mr-5" >www.uc-bcf.edu.ph</p></a>
           </motion.div>
