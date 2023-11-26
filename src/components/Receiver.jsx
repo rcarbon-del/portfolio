@@ -103,7 +103,7 @@ const Receiver = () => {
           <div className='mt-5'>
           {isLoggedIn ? (
             <div className='flex flex-row justify-between items-center mt-5 gap-5'>
-              <button onClick={() => {googleLogout(); localStorage.removeItem('accessToken'); setIsLoggedIn(false);}} className="w-5/6 text-xl rounded-2xl text-tertiary outline-none bg-white font-bold shadow-md shadow-primary py-5 mx-auto">
+              <button onClick={() => {googleLogout(); localStorage.removeItem('accessToken'); setIsLoggedIn(false); setMessages([]); setMessages2([]); setMessages3([]);}} className="w-5/6 text-xl rounded-2xl text-tertiary outline-none bg-white font-bold shadow-md shadow-primary py-5 mx-auto">
                 Logout
               </button>
               <button onClick={refreshEmails} className="w-1/6 text-xl rounded-2xl text-tertiary outline-none bg-white font-bold shadow-md shadow-primary py-5">
