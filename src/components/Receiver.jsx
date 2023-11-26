@@ -29,7 +29,7 @@ const Receiver = () => {
       const access_token = localStorage.getItem('access_token');
       const labelId = 'CATEGORY_PROMOTIONS';
       const labelId2 = 'CATEGORY_UPDATES';
-      const labelId3 = 'CATEGORY_FORUMS';
+      const labelId3 = 'CATEGORY_PRIMARY';
       fetchEmails(access_token, labelId)
         .then(data => setMessages(data))
         .catch(error => console.error(error));
@@ -68,7 +68,7 @@ const Receiver = () => {
     const access_token = localStorage.getItem('access_token');
     const labelId = 'CATEGORY_PROMOTIONS';
     const labelId2 = 'CATEGORY_UPDATES';
-    const labelId3 = 'CATEGORY_FORUMS';
+    const labelId3 = 'CATEGORY_PRIMARY';
     fetchEmails(access_token, labelId)
       .then(data => setMessages(data))
       .catch(error => console.error(error));
@@ -123,7 +123,7 @@ const Receiver = () => {
       >
           <motion.div
             variants={slideIn("left", "", 0.2, 1)}
-            className='w-1/3 bg-black-100 p-8 rounded-2xl'
+            className='w-1/3 bg-black-100 p-8 rounded-2xl min-h-[50px]'
             >
               <h2 className={styles.sectionHeadText}>Chat</h2>
               {messages2.map((message, index) => (
@@ -147,7 +147,7 @@ const Receiver = () => {
             variants={slideIn("left", "", 0.2, 1)}
             className='w-1/3 bg-black-100 p-8 rounded-2xl'
             >
-              <h2 className={styles.sectionHeadText}>SMS/Text</h2>
+              <h2 className={styles.sectionHeadText}>Text</h2>
               {messages.map((message, index) => (
                 <div key={index}>
                 <p className="mt-5 text-secondary text-[25px] leading-[30px]">{message.content}</p>
