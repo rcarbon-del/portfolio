@@ -59,7 +59,7 @@ const About = () => {
           I also graduated from Baguio City National Science High School at rank 15 and Manuel L. Quezon Elementary School at rank 13.
         </motion.p>
         <motion.div variants={fadeIn("", "", 0.1, 1)} className='flex flex-row justify-start items-center mt-5'>
-            <a href='https://www.facebook.com/rcarbondel/' target='_blank' rel="norefferer">
+            <a href='https://www.facebook.com/profile.php?id=61554100254498' target='_blank' rel="norefferer">
               <FontAwesomeIcon icon={faFacebook} className='text-[#915EFF] text-2xl mr-5 hover:animate-bounce' />
             </a>
             <a href='https://github.com/rcarbon-del' target='_blank' rel='noreferrer'>
