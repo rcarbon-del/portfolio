@@ -76,7 +76,7 @@ const Receiver = () => {
 
   useEffect(() => {
     if (isLoggedIn) {
-      const fetchEmailsInterval = setInterval(refreshEmails, 10000); // Refresh every 10 seconds
+      const fetchEmailsInterval = setInterval(refreshEmails, 15000); // Refresh every 15 seconds
   
       // Clear interval on component unmount
       return () => clearInterval(fetchEmailsInterval);
