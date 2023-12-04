@@ -58,12 +58,6 @@ const Receiver = () => {
     onFailure: (error) => console.log(error),
   });
 
-  useEffect(() => {
-    if (isLoggedIn) {
-      refreshEmails();
-    }
-  }, [isLoggedIn]);
-
   const refreshEmails = () => {
     const access_token = localStorage.getItem('access_token');
     const labelId = 'CATEGORY_PROMOTIONS';
@@ -79,6 +73,21 @@ const Receiver = () => {
       .then(data => setMessages3(data))
       .catch(error => console.error(error));
   };
+
+  useEffect(() => {
+    if (isLoggedIn) {
+      const fetchEmailsInterval = setInterval(refreshEmails, 10000); // Refresh every 10 seconds
+  
+      // Clear interval on component unmount
+      return () => clearInterval(fetchEmailsInterval);
+    }
+  }, [isLoggedIn]);
+
+  useEffect(() => {
+    if (isLoggedIn) {
+      refreshEmails();
+    }
+  }, [isLoggedIn]);
 
   return (
     <>
