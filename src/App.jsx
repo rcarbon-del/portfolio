@@ -18,7 +18,6 @@ const App = () => {
             <Contact />
             <StarsCanvas />
           </div>
-          <Receiver />
         </div>
       </BrowserRouter>
     </GoogleOAuthProvider>
