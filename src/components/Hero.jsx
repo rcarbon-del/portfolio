@@ -5,7 +5,7 @@ import {styles} from "../styles";
 import {ComputersCanvas} from "./canvas";
 import { silhouette } from "../assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faFacebook, faInstagram, faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faFacebook, faInstagram, faYoutube, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const Hero = () => {
   return (
@@ -26,7 +26,6 @@ const Hero = () => {
             I am a &nbsp;
             <ReactTyped strings={["Student", "Gamer", "Rookie Developer"]} typeSpeed={100} loop backSpeed={50} />
           </p>
-          <img src={silhouette} className='w-[125px] h-[125px] mt-2 animate-pulse' alt='' />
         </div>
       </div>
 
@@ -43,8 +42,8 @@ const Hero = () => {
             <a href='https://www.instagram.com/rcarbon.ig/' target='_blank' rel='noreferrer'>
               <FontAwesomeIcon icon={faInstagram} className='text-[#915EFF] text-2xl mr-5 transition-all hover:animate-bounce' />
             </a>
-            <a href='https://twitter.com/rcarbontwt/' target='_blank' rel='noreferrer'>
-              <FontAwesomeIcon icon={faTwitter} className='text-[#915EFF] text-2xl mr-5 transition-all hover:animate-bounce' />
+            <a href='https://www.youtube.com/@rcarbonyt' target='_blank' rel='noreferrer'>
+              <FontAwesomeIcon icon={faYoutube} className='text-[#915EFF] text-2xl mr-5 hover:animate-bounce' />
             </a>
             <a href='https://www.linkedin.com/in/rcarbon/' target='_blank' rel='noreferrer'>
               <FontAwesomeIcon icon={faLinkedin} className='text-[#915EFF] text-2xl mr-5 transition-all hover:animate-bounce' />

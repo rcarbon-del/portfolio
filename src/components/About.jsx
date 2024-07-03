@@ -2,7 +2,7 @@ import React from "react";
 import { Tilt } from "react-tilt";
 import {motion} from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faFacebook, faInstagram, faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faFacebook, faInstagram, faYoutube, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 import { styles } from "../styles";
 import { services } from "../constants";
@@ -53,10 +53,10 @@ const About = () => {
         </motion.div>
         
         <motion.p variants={fadeIn("", "", 0.1, 1)} className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-          I am Radge Daryll Carbonel, currently 18 years old and born in Baguio City, Benguet. I am a first-year student at University of the Cordilleras who is currently taking the course of Bachelor of Science in Computer Science.
+          I am Radge Daryll Carbonel, currently 19 years old and born in Baguio City, Benguet. I am a first-year student at University of the Cordilleras who is currently taking the course of Bachelor of Science in Computer Science.
         </motion.p>
         <motion.p variants={fadeIn("", "", 0.1, 1)} className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-          I also graduated from Baguio City National Science High School at rank 15 and Manuel L. Quezon Elementary School at rank 13.
+          I also graduated from Baguio City National Science High School at rank 15 and Manuel L. Quezon Elementary School at rank 13. Currently at UC, I have obtained Dean's List and College Scholar for the first and second semester of my first year respectively.
         </motion.p>
         <motion.div variants={fadeIn("", "", 0.1, 1)} className='flex flex-row justify-start items-center mt-5'>
             <a href='https://www.facebook.com/profile.php?id=61554100254498' target='_blank' rel="norefferer">
@@ -68,8 +68,8 @@ const About = () => {
             <a href='https://www.instagram.com/rcarbon.ig/' target='_blank' rel='noreferrer'>
               <FontAwesomeIcon icon={faInstagram} className='text-[#915EFF] text-2xl mr-5 hover:animate-bounce' />
             </a>
-            <a href='https://twitter.com/rcarbontwt/' target='_blank' rel='noreferrer'>
-              <FontAwesomeIcon icon={faTwitter} className='text-[#915EFF] text-2xl mr-5 hover:animate-bounce' />
+            <a href='https://www.youtube.com/@rcarbonyt' target='_blank' rel='noreferrer'>
+              <FontAwesomeIcon icon={faYoutube} className='text-[#915EFF] text-2xl mr-5 hover:animate-bounce' />
             </a>
             <a href='https://www.linkedin.com/in/rcarbon/' target='_blank' rel='noreferrer'>
               <FontAwesomeIcon icon={faLinkedin} className='text-[#915EFF] text-2xl mr-5 hover:animate-bounce' />
@@ -82,9 +82,9 @@ const About = () => {
           <p><FontAwesomeIcon icon={faPhone} className='text-[#915EFF] text-xl mr-2' /></p>
           <p className="text-secondary text-[17px] leading-[30px] mr-5" >09760304353</p>
           <p><FontAwesomeIcon icon={faMailBulk} className='text-[#915EFF] text-xl mr-2' /></p>
-          <p className="text-secondary text-[17px] leading-[30px] mr-5" >contact@rcarbon.me</p>
-          <a href='https://uc-bcf.edu.ph'target='_blank' className="flex"><FontAwesomeIcon icon={faEarth} className='text-[#915EFF] text-xl mr-2' />
-          <p className="text-secondary text-[17px] leading-[30px] mr-5" >www.uc-bcf.edu.ph</p></a>
+          <p className="text-secondary text-[17px] leading-[30px] mr-5" >rcarbon@abvlnt.com</p>
+          <a href='https://abvlnt.com'target='_blank' className="flex"><FontAwesomeIcon icon={faEarth} className='text-[#915EFF] text-xl mr-2' />
+          <p className="text-secondary text-[17px] leading-[30px] mr-5" >abvlnt.com</p></a>
           </motion.div>
       </div>
 
