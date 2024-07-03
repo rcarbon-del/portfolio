@@ -245,24 +245,6 @@ import {
         "I graduated senior high school at Baguio City National Science High School in 2023 with high marks.",
       image: shs,
     },
-    {
-      name: "Hug with my mother, Elvie",
-      description:
-        "Thank you for always supporting me and helping me in every way possible Mom.",
-      image: mom,
-    },
-    {
-      name: "Handshake with my father, Edgar",
-      description:
-        " Thank you for everything you have done and will do in the future, Dad!",
-      image: dad,
-    },
-    {
-      name: "With Sir Jeremiah Pasion",
-      description:
-        "A picture with one of the newer professors here in UC CITCS.",
-      image: withsir,
-    },
   ];
   
   export { services, technologies, experiences, testimonials, projects };
